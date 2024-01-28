@@ -17,7 +17,7 @@
     const amount = input.value;
 
     if (amount >= 1 && amount <= 100) {
-      boxesContainer.innerHTML = ''; // Clear existing boxes
+      boxesContainer.innerHTML = ''; 
 
       for (let i = 0; i < amount; i++) {
         const size = 30 + i * 10;
