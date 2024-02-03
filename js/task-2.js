@@ -31,14 +31,9 @@ const images = [
 ];
 const galleryContainer = document.querySelector('.gallery');
 
-  images.forEach(image => {
-    const galleryItem = document.createElement('li');
-    galleryItem.classList.add('gallery-item');
+let galleryHTML = '';
+images.forEach(image => {
+  galleryHTML += `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" /></li>`;
+});
 
-    const imgElement = document.createElement('img');
-    imgElement.src = image.url;
-    imgElement.alt = image.alt;
-
-    galleryItem.appendChild(imgElement);
-    galleryContainer.appendChild(galleryItem);
-  });
+galleryContainer.insertAdjacentHTML('beforeend', galleryHTML);
